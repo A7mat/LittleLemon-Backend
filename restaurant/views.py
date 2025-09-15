@@ -23,12 +23,10 @@ class UserViewSet(ModelViewSet):
    permission_classes = [permissions.IsAuthenticated]
 
 class MenuItemView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
 
 class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
-    permission_classes = [IsAuthenticated]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
 
