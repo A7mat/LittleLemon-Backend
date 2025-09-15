@@ -64,7 +64,15 @@ python manage.py runserver
 
 ---
 
+## ✅ Status
+
+This project is **in progress**. Some pages are under construction and additional features are planned.
+
 ## 📄 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+## 📌Acknowledgments
+
+_This project was developed as the Capstone for the **Meta Back-End Developer Professional Certificate** program._
 
 ---
