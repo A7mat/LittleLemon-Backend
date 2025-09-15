@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import MenuItem, Booking, Category
 from django.contrib.auth.models import User
+from rest_framework.validators import UniqueValidator
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,6 +18,17 @@ class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
         fields = '__all__'
+        extra_kwargs = {
+            'price': {'min_value': 0},
+            'inventory': {'min_value': 0},
+            'title': {
+                'validators': [
+                    UniqueValidator(
+                        queryset=MenuItem.objects.all()
+                    )
+                ]
+            }
+            }
 
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
