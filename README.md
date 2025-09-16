@@ -59,8 +59,8 @@ python manage.py runserver
 | `/restaurant/menu-items/`       | POST   | Add item             |
 | `/restaurant/menu-items/{id}/`      | PUT  | Adjust item         |
 | `/restaurant/menu-items/{id}/`      | DELETE  | Delete item          |
-| `/restaurant/booking`      | GET  | Get all bookings          |
-| `/restaurant/booking`      | POST  | Add a new booking       |
+| `/restaurant/booking/`      | GET  | Get all bookings          |
+| `/restaurant/booking/`      | POST  | Add a new booking       |
 
 ---
 
